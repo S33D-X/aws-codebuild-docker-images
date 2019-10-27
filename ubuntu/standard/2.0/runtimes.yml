@@ -95,6 +95,9 @@ runtimes:
       18:
         commands:
           - echo "Installing Docker version 18 ..."
+      19:
+        commands:
+          - echo "Installing Docker version 19.03 ..."
   dotnet:
     versions:
       2.2:
