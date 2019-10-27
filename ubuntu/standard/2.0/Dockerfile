@@ -29,7 +29,7 @@ ARG CHINA_REGION
 ENV DOCKER_BUCKET="download.docker.com" \
     DOCKER_CHANNEL="stable" \
     DOCKER_SHA256="6e7d8e24ee46b13d7547d751696d01607d19c8224c1b2c867acc8c779e77734b" \
-    DIND_COMMIT="3b5fac462d21ca164b3778647420016315289034" \
+    DIND_COMMIT="37498f009d8bf25fbb6199e8ccd34bed84f2874b" \
     GITVERSION_VERSION="4.0.0" \
     DEBIAN_FRONTEND="noninteractive" \
     SRC_DIR="/usr/src"
@@ -119,6 +119,7 @@ VOLUME /var/lib/docker
 
 # Configure SSH
 COPY ssh_config /root/.ssh/config
+EXPOSE 2375 2376
 
 COPY runtimes.yml /codebuild/image/config/runtimes.yml
 
